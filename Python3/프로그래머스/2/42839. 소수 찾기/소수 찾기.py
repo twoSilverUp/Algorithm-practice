@@ -1,4 +1,5 @@
 from itertools import permutations as per
+
 def solution(numbers):
     answer = 0
     candidates = []
