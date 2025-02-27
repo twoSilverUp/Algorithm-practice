@@ -5,11 +5,11 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         char[] input = br.readLine().toCharArray();
-        int[][] counts = new int[28][input.length];
+        int[][] counts = new int[26][input.length];
 
         counts[input[0]-'a'][0] = 1;
         for(int i=1; i<input.length; i++){
-            for(int j=0; j<28; j++){
+            for(int j=0; j<26; j++){
                 if(input[i]-'a'==j) counts[j][i]=counts[j][i-1]+1;
                 else counts[j][i]=counts[j][i-1];
             }
